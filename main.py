@@ -2,7 +2,7 @@ from flask import Flask
 import pandas as pd
 
 
-df = pd.read_csv('./data/diagnoses.2019.csv')
+df = pd.read_csv('./data/diagnoses2019.csv')
 
 app = Flask(__name__)
 
