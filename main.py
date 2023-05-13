@@ -18,9 +18,9 @@ def preview():
     result = top10rows.to_json(orient="records")
     return result
 
-@app.route('/icd/<value>', methods=["GET"])
+@app.route('/age_group_code/<value>', methods=["GET"])
 def icd(value):
-    filtered = df[df['principal_diagnosis_code'] == value]
+    filtered = df[df['age_group_code'] == value]
     return filtered.to_json(orient="records")
 
 
