@@ -19,10 +19,15 @@ def preview():
     return result
 
 @app.route('/payer/<value>', methods=["GET"])
-def icd(value):
+def payer(value):
     filtered = df[df['payer'] == value]
     return filtered.to_json(orient="records")
 
+
+@app.route('/sex/<value>', methods=["GET"])
+def sex(value):
+    filtered = df[df['sex'] == value]
+    return filtered.to_json(orient="records")
 
 if __name__ == '__main__':
     app.run(debug=True)
